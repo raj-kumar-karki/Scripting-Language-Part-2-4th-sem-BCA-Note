@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ajax with javascript</title>
+</head>
+<body>
+<script type="text/javascript">
+function loadDoc(){
+	var req = new XMLHttpRequest();
+	req.onreadystatechange = function()
+	{
+		if(this.readyState == 4 && this.status == 200){
+			document.getElementById("demo").innerHTML = this.responseText;
+		}
+	};
+	req.open("Get","winfo.php");
+	req.send();
+}
+</script>
+<button type="button" onclick="loadDoc()">load</button>
+<div id="demo">Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>NepaliNepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali NepaliNepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali <br>Nepali Nepali Nepali Nepali Nepali</div>
+</body>
+</html>
